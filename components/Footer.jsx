@@ -1,6 +1,7 @@
 // components/Footer.tsx
 import Image from 'next/image'
 import Link from 'next/link'
+import SocialIcons from './social-links'
 
 export default function Footer() {
   return (
@@ -20,25 +21,7 @@ export default function Footer() {
             </Link>
 
             <div className="mt-6 flex space-x-4">
-              {['Reddit', 'Facebook', 'Github'].map((platform) => (
-                <Link
-                  href="#"
-                  key={platform}
-                  aria-label={platform}
-                  className="text-gray-600 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400 transition-colors duration-300"
-                >
-                  <span className="sr-only">{platform}</span>
-                  {/* You can replace these with icons from lucide-react or react-icons */}
-                  <svg
-                    className="h-5 w-5 fill-current"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <circle cx="12" cy="12" r="10" />
-                  </svg>
-                </Link>
-              ))}
+              <SocialIcons />
             </div>
           </div>
 
@@ -92,7 +75,7 @@ export default function Footer() {
         <hr className="my-6 border-t border-gray-200 dark:border-gray-700" />
 
         <p className="text-center text-gray-500 dark:text-gray-400">
-          © Brand {new Date().getFullYear()} - All rights reserved
+          © Youth-Of-Igunsin {new Date().getFullYear()} - All rights reserved
         </p>
       </div>
     </footer>

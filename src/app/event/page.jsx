@@ -3,7 +3,7 @@ import Link from 'next/link' // Ensure you're importing Link from 'next/link'
 
 export default function Event() {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-[#05141d] text-white">
+    <div className="flex flex-col items-center justify-center min-h-screen bg-[#092f46] pb-5 text-white">
       <h1 className="text-4xl font-bold mb-4 mt-4">Events</h1>
       <p className="text-lg text-center max-w-2xl px-4">
         Join us for our upcoming events and activities. We have a variety of

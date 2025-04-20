@@ -3,7 +3,6 @@ import About from 'components/About'
 
 import Comrades from 'components/Comrades'
 import Contact from 'components/Contact'
-import Footer from 'components/Footer'
 
 function page() {
   return (
@@ -14,7 +13,6 @@ function page() {
 
         <Comrades />
         <Contact />
-        <Footer />
       </section>
     </div>
   )
