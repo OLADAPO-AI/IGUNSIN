@@ -46,14 +46,12 @@ export default function Footer() {
               },
             ].map(({ title, links, isTextOnly }) => (
               <div key={title}>
-                <h3 className="uppercase text-gray-700 dark:text-white font-semibold">
-                  {title}
-                </h3>
+                <h3 className="uppercase text-white font-semibold">{title}</h3>
                 {links.map((link, idx) =>
                   isTextOnly ? (
                     <span
                       key={idx}
-                      className="block mt-2 text-sm text-gray-600 dark:text-gray-400"
+                      className="block mt-2 text-sm text-gray-400"
                     >
                       {link}
                     </span>
@@ -61,7 +59,7 @@ export default function Footer() {
                     <Link
                       key={idx}
                       href="#"
-                      className="block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline"
+                      className="block mt-2 text-sm text-gray-400 hover:underline"
                     >
                       {link}
                     </Link>
@@ -72,9 +70,9 @@ export default function Footer() {
           </div>
         </div>
 
-        <hr className="my-6 border-t border-gray-200 dark:border-gray-700" />
+        <hr className="my-6 border-t border-gray-700" />
 
-        <p className="text-center text-gray-500 dark:text-gray-400">
+        <p className="text-center text-gray-400">
           © Youth-Of-Igunsin {new Date().getFullYear()} - All rights reserved
         </p>
       </div>

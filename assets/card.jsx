@@ -2,7 +2,7 @@ import Link from 'next/link'
 
 export default function Card({ link }) {
   return (
-    <article className="overflow-hidden rounded-lg border border-gray-100 bg-white shadow-xs dark:border-gray-800 dark:bg-gray-900 dark:shadow-gray-700/25">
+    <article className="overflow-hidden rounded-lg border  bg-white shadow-xs border-gray-800 dark:bg-gray-900 shadow-gray-700/25">
       <img
         alt="Healthcare Outreach"
         src={`/event/event1.png`}
@@ -11,12 +11,12 @@ export default function Card({ link }) {
 
       <div className="p-4 sm:p-6">
         <Link href="#">
-          <h3 className="text-lg font-medium text-gray-900 dark:text-white">
+          <h3 className="text-lg font-medium text-white">
             Healthcare Outreach Initiatives
           </h3>
         </Link>
 
-        <p className="mt-2 line-clamp-3 text-sm/relaxed text-gray-500 dark:text-gray-400">
+        <p className="mt-2 line-clamp-3 text-sm/relaxed text-gray-400">
           Our healthcare outreach programs aim to provide essential health
           services and education to underserved communities, ensuring everyone
           has access to the care they need.

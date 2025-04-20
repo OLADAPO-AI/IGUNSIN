@@ -117,7 +117,7 @@ function Contact() {
                     id="email"
                     type="email"
                     placeholder="johndoe@example.com"
-                    className="block w-full px-5 py-3 mt-2 text-sm text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md shadow-sm dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring focus:ring-blue-300 focus:ring-opacity-40 focus:outline-none"
+                    className="block w-full px-5 py-3 mt-2 text-sm placeholder-gray-40 border border-gray-200 rounded-md shadow-sm dark:placeholder-gray-600 bg-gray-900 text-gray-300 dark:border-gray-700 focus:border-blue-400 focus:ring focus:ring-blue-300 focus:ring-opacity-40 focus:outline-none"
                   />
                 </div>
 
@@ -132,7 +132,7 @@ function Contact() {
                     id="message"
                     rows="6"
                     placeholder="Message"
-                    className="block w-full px-5 py-3 mt-2 text-sm text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md shadow-sm dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring focus:ring-blue-300 focus:ring-opacity-40 focus:outline-none"
+                    className="block w-full px-5 py-3 mt-2 text-sm border rounded-md shadow-sm placeholder-gray-600 bg-gray-900 text-gray-300 border-gray-700 focus:border-blue-400 focus:ring focus:ring-blue-300 focus:ring-opacity-40 focus:outline-none"
                   ></textarea>
                 </div>
 
