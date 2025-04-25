@@ -13,7 +13,18 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata = {
-  title: 'Create Next App',
+  title: 'Igunsin Youth Forum',
+  description:
+    'Igunsin Youth Forum is a community-based organization dedicated to empowering youth through education, innovation, and community development.',
+  openGraph: {
+    title: 'Igunsin Youth Forum',
+    description:
+      'Igunsin Youth Forum is a community-based organization dedicated to empowering youth through education, innovation, and community development.',
+    url: 'https://igunsinyouthforum.org',
+    siteName: 'Igunsin Youth Forum',
+
+    type: 'website',
+  },
   description: 'Community website',
   keywords: 'Oladapo, Commiunity',
   authors: [{ name: 'Oladapo' }],

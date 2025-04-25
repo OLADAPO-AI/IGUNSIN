@@ -29,19 +29,16 @@ export default function Footer() {
             {[
               {
                 title: 'About',
-                links: ['Company', 'Community', 'Careers'],
+                links: ['Programs', 'Community', 'Careers'],
               },
               {
                 title: 'Blog',
-                links: ['Tech', 'Music', 'Videos'],
+                links: ['Latest Posts', 'Guides', 'News'],
               },
-              {
-                title: 'Products',
-                links: ['Mega Cloud', 'Aperion UI', 'Meraki UI'],
-              },
+
               {
                 title: 'Contact',
-                links: ['+1 526 654 8965', 'example@email.com'],
+                links: ['+234 7063580336', 'info@igunsinyouthforum.org'],
                 isTextOnly: true,
               },
             ].map(({ title, links, isTextOnly }) => (
