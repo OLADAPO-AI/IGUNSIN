@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 function HeroSegment() {
   return (
     <div className=" bg-[#05141d]">
@@ -10,9 +12,11 @@ function HeroSegment() {
           <p className="mt-6 text-2xl font-sans text-gray-300">
             Join a movement of young leaders committed to positive change
           </p>
-          <button className="px-5 py-2 mt-6 text-sm font-medium leading-5 text-center text-white capitalize bg-orange-600 rounded-lg hover:bg-orange-500 lg:mx-0 lg:w-auto focus:outline-none">
-            Connect with Us
-          </button>
+          <Link href="/contact">
+            <button className="px-5 py-2 mt-6 text-sm font-medium leading-5 text-center text-white capitalize bg-orange-600 rounded-lg hover:bg-orange-500 lg:mx-0 lg:w-auto focus:outline-none">
+              Connect with Us
+            </button>
+          </Link>
         </div>
 
         <div className="flex justify-center mt-10">
