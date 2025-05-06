@@ -1,37 +1,38 @@
 import React from 'react'
+import Image from 'next/image'
 
 function Comrades() {
   // Member data
   const members = [
     {
       id: 1,
-      name: 'Loveday Onyeanula',
+      name: 'Oladapo Falusi',
       role: 'Chairman',
-      image: '/images/loveday.jpg', // Replace with your actual image paths
+      image: '/images/ola.jpg',
     },
     {
       id: 2,
       name: 'Chibugo Illoh',
       role: 'Vice-Chairman',
-      image: '/images/chibugo.jpg',
+      image: '/images/name1.jpg',
     },
     {
       id: 3,
       name: 'Praise Sunday',
       role: 'Secetary',
-      image: '/images/praise.jpg',
+      image: '/images/name2.jpg',
     },
     {
       id: 4,
       name: 'Emediong Ebong',
       role: 'P.R.O',
-      image: '/images/emediong.jpg',
+      image: '/images/name3.jpg',
     },
     {
       id: 5,
       name: 'Peace Ewor',
       role: 'Finiancial Secretary',
-      image: '/images/peace.jpg',
+      image: '/images/name4.jpg',
     },
   ]
 
@@ -46,7 +47,9 @@ function Comrades() {
           {members.map((member) => (
             <div key={member.id} className="flex flex-col items-center">
               <div className="w-40 h-40 rounded-full border-4 border-orange-400 p-1 mb-4">
-                <img
+                <Image
+                  width={160}
+                  height={160}
                   src={member.image}
                   alt={member.name}
                   className="w-full h-full rounded-full object-cover"
