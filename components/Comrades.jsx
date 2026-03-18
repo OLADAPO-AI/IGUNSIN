@@ -1,8 +1,10 @@
+'use client'
+
 import React from 'react'
 import Image from 'next/image'
+import { motion } from 'framer-motion'
 
 function Comrades() {
-  // Member data
   const members = [
     {
       id: 1,
@@ -37,15 +39,29 @@ function Comrades() {
   ]
 
   return (
-    <section className="py-16 bg-[#05141d]">
+    <section className="py-16 bg-[#05141d]" style={{ perspective: '1200px' }}>
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold text-center text-white mb-16">
+        <motion.h2
+          className="text-4xl font-bold text-center text-white mb-16"
+          initial={{ opacity: 0, rotateX: 20, y: 30 }}
+          whileInView={{ opacity: 1, rotateX: 0, y: 0 }}
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ duration: 0.7, ease: 'easeOut' }}
+        >
           Forum Committee Members
-        </h2>
+        </motion.h2>
 
         <div className="flex flex-wrap justify-center gap-8 md:gap-12">
-          {members.map((member) => (
-            <div key={member.id} className="flex flex-col items-center">
+          {members.map((member, index) => (
+            <motion.div
+              key={member.id}
+              className="flex flex-col items-center"
+              initial={{ opacity: 0, rotateX: 30, y: 50 }}
+              whileInView={{ opacity: 1, rotateX: 0, y: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.6, ease: 'easeOut', delay: index * 0.1 }}
+              whileHover={{ rotateY: 10, scale: 1.08 }}
+            >
               <div className="w-40 h-40 rounded-full border-4 border-orange-400 p-1 mb-4">
                 <Image
                   width={160}
@@ -59,15 +75,25 @@ function Comrades() {
                 {member.name}
               </h3>
               <p className="text-gray-600">{member.role}</p>
-            </div>
+            </motion.div>
           ))}
         </div>
 
-        <div className="flex justify-center mt-16">
-          <button className="px-8 py-3 bg-orange-500 text-white rounded-md hover:bg-orange-600 transition-colors">
+        <motion.div
+          className="flex justify-center mt-16"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ duration: 0.5, delay: 0.5 }}
+        >
+          <motion.button
+            className="px-8 py-3 bg-orange-500 text-white rounded-md hover:bg-orange-600 transition-colors"
+            whileHover={{ scale: 1.05, rotateX: -5 }}
+            whileTap={{ scale: 0.97 }}
+          >
             See More
-          </button>
-        </div>
+          </motion.button>
+        </motion.div>
       </div>
     </section>
   )
