@@ -19,7 +19,7 @@ function Comrades() {
     {
       id: 3,
       name: 'Praise Sunday',
-      role: 'Secetary',
+      role: 'Secretary',
       image: '/images/name2.jpg',
     },
     {
@@ -31,7 +31,7 @@ function Comrades() {
     {
       id: 5,
       name: 'Peace Ewor',
-      role: 'Finiancial Secretary',
+      role: 'Financial Secretary',
       image: '/images/name4.jpg',
     },
   ]

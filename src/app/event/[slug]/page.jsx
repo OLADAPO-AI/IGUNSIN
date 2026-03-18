@@ -1,35 +1,33 @@
 import { cards } from 'dummy-data'
-import Notfound from '@/not-found'
-export default function EventDetailsPage({ params }) {
-  const eventSlug = params.slug
-  const newEventSlug = cards.find((card) => card.slug === eventSlug)
-  if (!newEventSlug) {
-    return (
-      <div>
-        <Notfound />
-      </div>
-    )
+import { notFound } from 'next/navigation'
+import Image from 'next/image'
+
+export default async function EventDetailsPage({ params }) {
+  const { slug } = await params
+  const event = cards.find((card) => card.slug === slug)
+
+  if (!event) {
+    notFound()
   }
 
   return (
-    <div>
-      <article className="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow">
-        <img
-          src={newEventSlug.image}
-          alt={newEventSlug.alt}
-          className="w-full h-64 object-cover"
-        />
+    <div className="min-h-screen bg-[#092f46] py-10 px-4">
+      <article className="max-w-3xl mx-auto bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow">
+        <div className="relative w-full h-64">
+          <Image
+            src={event.image}
+            alt={event.alt}
+            fill
+            className="object-cover"
+          />
+        </div>
         <div className="p-6">
           <h3 className="text-2xl font-semibold text-gray-800 mb-4">
-            <a href={newEventSlug.link} className="hover:underline">
-              {newEventSlug.title}
-            </a>
+            {event.title}
           </h3>
+          <p className="text-gray-600">{event.blog}</p>
         </div>
       </article>
-      <div>
-        <p className="text-white mt-6 p-5">{newEventSlug.blog}</p>
-      </div>
     </div>
   )
 }
