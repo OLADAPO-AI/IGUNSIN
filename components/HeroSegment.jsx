@@ -1,12 +1,13 @@
 import Link from 'next/link'
+import Image from 'next/image'
 
 function HeroSegment() {
   return (
-    <div className=" bg-[#05141d]">
+    <div className="bg-[#05141d]">
       <div className="container px-6 py-16 mx-auto text-center">
         <div className="max-w-lg mx-auto">
           <h1 className="text-3xl font-semibold text-white lg:text-5xl">
-            Your Ideas,<span className=" text-orange-700 ">Our Community,</span>{' '}
+            Your Ideas,<span className="text-orange-700"> Our Community,</span>{' '}
             Real Impact
           </h1>
           <p className="mt-6 text-2xl font-sans text-gray-300">
@@ -20,10 +21,15 @@ function HeroSegment() {
         </div>
 
         <div className="flex justify-center mt-10">
-          <img
-            className="object-cover w-full h-96 rounded-xl lg:w-4/5"
-            src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1632&q=80"
-          />
+          <div className="relative w-full h-96 lg:w-4/5 rounded-xl overflow-hidden">
+            <Image
+              src="/hero.png"
+              alt="Igunsin Youth Forum community"
+              fill
+              className="object-cover"
+              priority
+            />
+          </div>
         </div>
       </div>
     </div>
