@@ -1,4 +1,7 @@
+'use client'
+
 import Image from 'next/image'
+import { motion } from 'framer-motion'
 
 const cards = [
   {
@@ -32,25 +35,36 @@ const cards = [
 
 function About() {
   return (
-    <section className="bg-white dark:bg-gray-900">
+    <section className="bg-white dark:bg-gray-900" style={{ perspective: '1200px' }}>
       <div className="container px-6 py-10 mx-auto">
-        <div className="text-center">
+        <motion.div
+          className="text-center"
+          initial={{ opacity: 0, y: 30, rotateX: 15 }}
+          whileInView={{ opacity: 1, y: 0, rotateX: 0 }}
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ duration: 0.7, ease: 'easeOut' }}
+        >
           <h1 className="text-2xl font-semibold text-gray-800 capitalize lg:text-3xl dark:text-white">
-            About <span className=" text-orange-700 ">Our Community,</span>
+            About <span className="text-orange-700">Our Community,</span>
           </h1>
           <p className="max-w-lg mx-auto mt-4 text-gray-500">
             Our forum is a vibrant space dedicated to empowering young voices
             and fostering meaningful connections. Join us in shaping a brighter
             future together.
           </p>
-        </div>
+        </motion.div>
       </div>
 
       <div className="flex flex-col lg:flex-row gap-8 mt-8 pb-6 px-6 lg:px-16">
         {cards.map((card, index) => (
-          <article
+          <motion.article
             key={index}
             className="overflow-hidden rounded-lg border border-gray-100 bg-white shadow-xs dark:border-gray-800 dark:bg-gray-900 dark:shadow-gray-700/25"
+            initial={{ opacity: 0, rotateY: 25, z: -80, y: 40 }}
+            whileInView={{ opacity: 1, rotateY: 0, z: 0, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.7, ease: 'easeOut', delay: index * 0.15 }}
+            whileHover={{ rotateY: -5, scale: 1.02, z: 20 }}
           >
             <div className="relative h-56 w-full">
               <Image
@@ -83,7 +97,7 @@ function About() {
                 </span>
               </a>
             </div>
-          </article>
+          </motion.article>
         ))}
       </div>
     </section>
