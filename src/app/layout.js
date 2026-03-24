@@ -1,7 +1,6 @@
 import { Geist, Geist_Mono } from 'next/font/google'
 import './globals.css'
-import NavBar from '../../components/NavBar'
-import Footer from '../../components/Footer'
+
 const geistSans = Geist({
   variable: '--font-geist-sans',
   subsets: ['latin'],
@@ -13,23 +12,21 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata = {
-  title: 'Igunsin Youth Forum',
+  title: 'CAYEF — Canada-Africa Youth Education Forum',
   description:
-    'Igunsin Youth Forum is a community-based organization dedicated to empowering youth through education, innovation, and community development.',
+    'The Canada-Africa Youth Education Forum brings together education stakeholders, policymakers, diaspora communities, and young people from Canada and Africa.',
   openGraph: {
-    title: 'Igunsin Youth Forum',
+    title: 'CAYEF — Canada-Africa Youth Education Forum',
     description:
-      'Igunsin Youth Forum is a community-based organization dedicated to empowering youth through education, innovation, and community development.',
-    url: 'https://igunsinyouthforum.org',
-    siteName: 'Igunsin Youth Forum',
-
+      'The Canada-Africa Youth Education Forum brings together education stakeholders, policymakers, diaspora communities, and young people from Canada and Africa.',
+    url: 'https://cayef.org',
+    siteName: 'CAYEF',
     type: 'website',
   },
-  description: 'Community website',
-  keywords: 'Oladapo, Commiunity',
-  authors: [{ name: 'Oladapo' }],
-  creator: 'Oladapo',
-  publisher: 'Oladapo',
+  keywords: 'Canada, Africa, Youth, Education, Forum, CAYEF, Toronto, 2026',
+  authors: [{ name: 'CAYEF' }],
+  creator: 'CAYEF',
+  publisher: 'CAYEF',
 }
 
 export default function RootLayout({ children }) {
@@ -38,9 +35,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <NavBar />
         {children}
-        <Footer />
       </body>
     </html>
   )
